@@ -58,7 +58,6 @@
 		// Build SQL query to insert new expense data into SQL database
 		$tsql=
 		"INSERT INTO Directory (	
-				Person ID,
 				FirstName,
 				LastName,
 				StartDate,
@@ -66,8 +65,7 @@
 				VMake,
 				VModel,
 				Notes)
-		VALUES ('" . $userEmail . "',
-				'" . $first_name . "', 
+		VALUES ('" . $first_name . "', 
 				'" . $last_name . "', 
 				'" . $start_date . "', 
 				'" . $end_date . "', 

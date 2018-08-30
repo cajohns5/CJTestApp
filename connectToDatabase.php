@@ -4,11 +4,11 @@ function ConnectToDabase()
 {
 	/* Get environment variables (defined in Azure App Service Settings) for Azure SQL Database connection */
 	/* Further info: https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-configure#application-settings */
-	$serverName = getenv("myprime"); // In the form of: sqlservername.database.windows.net
+	$serverName = getenv("msSqlServer"); // In the form of: sqlservername.database.windows.net
 	$connectionOptions = array(
-		"Database" => getenv("Directory"),
-		"Uid" => getenv("thekid"),
-		"PWD" => getenv("Azure1234!@#$")
+		"Database" => getenv("databaseName"),
+		"Uid" => getenv("dbUserName"),
+		"PWD" => getenv("dbPassword")
 	);
 
 	// Connect to Azure SQL Database
